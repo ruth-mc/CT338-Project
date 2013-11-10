@@ -28,5 +28,6 @@
             </table>
              <input type="submit" id="CreateRecord" value="CreateRecord" />
         </form>
+        <a href="ListPerson"><strong>Go to List of persons</strong></a>
     </body>
 </html>
