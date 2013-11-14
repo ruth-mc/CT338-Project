@@ -46,9 +46,10 @@ public class CreateCustomerServlet extends HttpServlet {
             String email   = (String) request.getParameter("email");
             String phonenumber   = (String) request.getParameter("phonenumber");
             String age   = (String)request.getParameter("age");
+            String subscription = (String)request.getParameter("subscription");
             
             //Create a person instance out of it
-            Customer customer = new Customer(id, name, email,phonenumber,age);
+            Customer customer = new Customer(id, name, email,phonenumber,age,subscription);
             
             //begin a transaction
             utx.begin();

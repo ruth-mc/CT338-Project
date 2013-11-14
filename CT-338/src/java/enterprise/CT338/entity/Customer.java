@@ -32,16 +32,20 @@ public class Customer  {
     @Column(name = "Age")
     private String age;
     
+      @Column(name = "Subscription")
+    private String subscription;
+    
     public Customer() {
     }
 
     public Customer(String id, String name, String email, String phNo,
-                    String age) {
+                    String age, String subscription) {
         this.id = id;
         this.name = name;
         this.email  = email;
         this.phNo=phNo;
         this.age=age;
+        this.subscription = subscription;
         
     }
 
@@ -61,6 +65,9 @@ public class Customer  {
     }
      public String getAge() {
         return this.age;
+    }
+      public String getSubscription() {
+        return this.subscription;
     }
 }
 

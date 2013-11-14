@@ -21,19 +21,21 @@
     <th bgcolor=>Email</th>
     <th bgcolor=>Phone Number</th>
     <th bgcolor=>Age</th>
+    <th bgcolor=>Subscription</th>
 </tr>
 <c:forEach var="customer" begin="0" items="${requestScope.customerList}">
 <tr>
-    <td>${customer.id}&nbsp;&nbsp;</td> 
-    <td>${customer.name}&nbsp;&nbsp;</td> 
-    <td>${customer.email}&nbsp;&nbsp;</td> 
-     <td>${customer.phoneNumber}&nbsp;&nbsp;</td> 
-    <td>${customer.age}&nbsp;&nbsp;</td> 
+    <td>${customer.getId()}&nbsp;&nbsp;</td> 
+    <td>${customer.getName()}&nbsp;&nbsp;</td> 
+    <td>${customer.getEmail()}&nbsp;&nbsp;</td> 
+     <td>${customer.getPhone()}&nbsp;&nbsp;</td> 
+    <td>${customer.getAge()}&nbsp;&nbsp;</td> 
+     <td>${customer.getSubscription()}&nbsp;&nbsp;</td> 
 </tr> 
 
 </c:forEach>
 
 </table>
-<a href="CreatePerson.jsp"><strong>Create a Person Record</strong></a>
+<a href="CreateCustomer.jsp"><strong>Create a Person Record</strong></a>
     </body>
 </html>
