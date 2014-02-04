@@ -17,23 +17,17 @@
     <body>
      <div id="main">
         <div id="header">
-          header
+          Home Page
         </div>
 
         <div id="indexLeftColumn">
             <p></p>
-             <a href="CreateCustomer.jsp">
-            <span class="categoryLabelText">Register</span>
+             <a href="index.jsp">
+            <span class="categoryLabelText">Logout</span>
              </a>
              <p></p>
-             <a href="ListPerson">
-            <span class="categoryLabelText">List Customers</span>
-             </a>
+           
             
-             <p></p>
-              <a href="LogIn.jsp">
-            <span class="categoryLabelText">Log In</span>
-             </a>
                    
         </div>
 

@@ -18,7 +18,7 @@ public class Customer  {
   
    @Id
     @Column(name = "CustomerId")
-    private String id;
+    private int id;
 
     @Column(name = "Name")
     private String name;
@@ -34,22 +34,26 @@ public class Customer  {
     
       @Column(name = "Subscription")
     private String subscription;
+      
+      @Column(name = "Password")
+      private String password;
     
     public Customer() {
     }
 
-    public Customer(String id, String name, String email, String phNo,
-                    String age, String subscription) {
+    public Customer(int id, String name, String email, String phNo,
+                    String age, String subscription,String password) {
         this.id = id;
         this.name = name;
         this.email  = email;
         this.phNo=phNo;
         this.age=age;
         this.subscription = subscription;
+        this.password = password;
         
     }
 
-    public String getId() {
+    public int getId() {
         return this.id;
     }
 
@@ -69,6 +73,10 @@ public class Customer  {
       public String getSubscription() {
         return this.subscription;
     }
+      
+      public String getPassword(){
+          return this.password;
+      }
 }
 
     

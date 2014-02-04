@@ -41,15 +41,17 @@ public class CreateCustomerServlet extends HttpServlet {
         try {
             
             //Get the data from user's form
-            String id         = (String) request.getParameter("id");
+            int randomNum = 1000 + (int)(Math.random()*1999); 
+            int id         =  randomNum;
             String name  = (String) request.getParameter("name");
             String email   = (String) request.getParameter("email");
             String phonenumber   = (String) request.getParameter("phonenumber");
             String age   = (String)request.getParameter("age");
             String subscription = (String)request.getParameter("subscription");
+            String password = (String)request.getParameter("password");
             
             //Create a person instance out of it
-            Customer customer = new Customer(id, name, email,phonenumber,age,subscription);
+            Customer customer = new Customer(id, name, email,phonenumber,age,subscription,password);
             
             //begin a transaction
             utx.begin();
@@ -75,7 +77,7 @@ public class CreateCustomerServlet extends HttpServlet {
             }
         }
     }
-    
+       
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /** Handles the HTTP <code>GET</code> method.
      * @param request servlet request
@@ -86,6 +88,8 @@ public class CreateCustomerServlet extends HttpServlet {
         processRequest(request, response);
     }
     
+    
+    
     /** Handles the HTTP <code>POST</code> method.
      * @param request servlet request
      * @param response servlet response
@@ -94,6 +98,8 @@ public class CreateCustomerServlet extends HttpServlet {
     throws ServletException, IOException {
         processRequest(request, response);
     }
+    
+    
     
     /** Returns a short description of the servlet.
      */
